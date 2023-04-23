@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import FileList from './FileList';
+import axios from "axios";
 import './Styling/main.css'
 
 
@@ -23,15 +24,22 @@ function Enclosure() {
     setFiles(newFiles);
   };
 
-  const handleUpdateFile = (index, event) => {
-    const newFiles = [...files];
-    newFiles[index] = {
-      preview: URL.createObjectURL(event.target.files[0]),
-      name: event.target.files[0].name,
-      type: event.target.files[0].type,
-      size: event.target.files[0].size,
-    };
-    setFiles(newFiles);
+  const handleUpdateFile = async (index, event) => {
+    const fileData = new FormData();
+    fileData.append("file", event.target.files[0]);
+    try {
+      const response = await axios.post("/api/files", fileData);
+      const newFiles = [...files];
+      newFiles[index] = {
+        preview: URL.createObjectURL(event.target.files[0]),
+        name: response.data.name,
+        type: response.data.type,
+        size: response.data.size,
+      };
+      setFiles(newFiles);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
