@@ -46,11 +46,12 @@ function Enclosure() {
     <div className="enclosure">
       <FileList files={files} />
       <div className="enclosure-options">
-        <input type="file" onChange={handleAddFile} />
-        <button className='font-poppins text-white bg-gray-gradient mr-10' onClick={() => handleDeleteFile(0)}>Delete</button>
+        <input type="file" name="file" id="file" onChange={handleAddFile} class="inputfile" />
+        <label for="file">Choose a file</label>
+        <button class="button" onClick={() => handleDeleteFile(0)}>Delete</button>
         <label htmlFor="update-file">
           <input type="file" id="update-file" onChange={(event) => handleUpdateFile(0, event)} style={{ display: 'none' }} />
-          <button className='font-poppins text-white bg-gray-gradient'>Update</button>
+          <button class="button">Update</button>
         </label>
       </div>
     </div>
