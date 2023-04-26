@@ -79,7 +79,7 @@ const Dportal = ({history}) => {
   return (
       <div className='app bg-primary'>
         <div className='login-form bg-primary '>
-            {isSubmitted ?<Link to="/main"><div><h1 className='text-white font-poppins'>Successfully loged in!</h1><button className='`px-4 py-2 font-poppins font-semibold ss:text-[20px] text-white bg-blue-gradient`'>Go to Database</button></div></Link>: renderform} 
+            {isSubmitted ?<Link to="/main"><div><h1 className='text-white font-poppins'>Successfully loged in!</h1><button className='`px-4 py-2 font-poppins font-semibold ss:text-[20px] text-white bg-blue-gradient'>Go to Database</button></div></Link>: renderform} 
         </div>  
       </div>  
   );

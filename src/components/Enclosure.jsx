@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import FileList from './FileList';
 import axios from "axios";
 import './Styling/main.css'
+import { Link } from 'react-router-dom';
 
 
 function Enclosure() {
@@ -42,6 +43,10 @@ function Enclosure() {
     }
   };
 
+  const renderdatabase=()=>{
+
+  };
+
   return (
     <div className="enclosure">
       <FileList files={files} />
@@ -54,6 +59,7 @@ function Enclosure() {
           <button class="button">Update</button>
         </label>
       </div>
+      <Link to="/List"><button class="button-1" onClick={() => renderdatabase}>Open Reports</button></Link>
     </div>
   );
 }
