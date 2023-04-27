@@ -48,18 +48,21 @@ function Enclosure() {
   };
 
   return (
-    <div className="enclosure">
-      <FileList files={files} />
-      <div className="enclosure-options">
-        <input type="file" name="file" id="file" onChange={handleAddFile} class="inputfile" />
-        <label for="file">Choose a file</label>
-        <button class="button" onClick={() => handleDeleteFile(0)}>Delete</button>
-        <label htmlFor="update-file">
-          <input type="file" id="update-file" onChange={(event) => handleUpdateFile(0, event)} style={{ display: 'none' }} />
-          <button class="button">Update</button>
-        </label>
+    <div>
+      <h1 class='title'>Staging Area</h1>
+      <div className="enclosure">
+        <FileList files={files} />
+        <div className="enclosure-options">
+          <input type="file" name="file" id="file" onChange={handleAddFile} class="inputfile" />
+          <label for="file">Choose a file</label>
+          <button class="button" onClick={() => handleDeleteFile(0)}>Delete</button>
+          <label htmlFor="update-file">
+            <input type="file" id="update-file" onChange={(event) => handleUpdateFile(0, event)} style={{ display: 'none' }} />
+            <button class="button">Update</button>
+          </label>
+        </div>
+        <Link to="/List"><button class="button-1" onClick={() => renderdatabase}>Open Reports</button></Link>
       </div>
-      <Link to="/List"><button class="button-1" onClick={() => renderdatabase}>Open Reports</button></Link>
     </div>
   );
 }

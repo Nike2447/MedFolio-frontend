@@ -9,6 +9,20 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     max-width: 500px;
-    background-color: #fff;
+    background-color: #c88b4b;
+  }
+  .file-list{
+    font-weight: 10px;
+    
+  }
+  .download-button{
+    padding:3px;
+    cursor: pointer;
+    font-size: 1.25em;
+    font-weight: 500;
+    color: white;
+    background-color: rgb(87, 138, 172);
+    display: inline-block;
+    border-radius: 5px;
   }
   

@@ -4,16 +4,22 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
     height: 100vh;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    background-color: #f8f9fd;
   }
   
   input[type="text"],
   input[type="password"] {
-    height: 25px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(207, 193, 193, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
   }
   
   input[type="submit"] {
@@ -29,16 +35,74 @@
   input[type="submit"]:hover {
     background: #6cf0c2;
   }
-  
+
+  .button-2{
+    margin-top: 30px;
+    width: 300px; 
+    background: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .button-3{
+    margin-top: 30px;
+    width: 200px; 
+    background: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   .button-container {
     display: flex;
     justify-content: center;
   }
   
   .login-form {
-    background-color: white;
-    padding: 2rem;
-    box-shadow: 8px 8px 0 rgba(14, 13, 13, 0.2), 0 6px 20px 0 rgba(244, 242, 242, 0.19);
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 10px 3px;
+  }
+  .login-form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+  } 
+  .success{
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+    padding-top: 200px;
+  }
+
+  .login-button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
   }
   
   .list-container {

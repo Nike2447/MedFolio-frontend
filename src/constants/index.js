@@ -11,11 +11,11 @@ export const navLinks = [
   },
   {
     id: "dportal",
-    title: "Doctor-Portal",
+    title: "Doctors Portal",
   },
   {
     id: "Pportal",
-    title: "Patient-Portal",
+    title: "Patients Portal",
   },
 ];
 

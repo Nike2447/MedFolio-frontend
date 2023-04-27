@@ -12,13 +12,13 @@ const fileList = [
 const ReportList = () => {
   return (
     <div className="file-list-container">
-      <h2>Files in Database</h2>
-      <ul className="file-list">
+      <h2 className='font-poppins text-[30px] text-white border-[4px] flex'>REPORTS</h2>
+      <ul className="file-list font-poppins">
         {fileList.map((file, index) => (
           <li key={index}>{file}</li>
         ))}
       </ul>
-      <Link to="/main"><button className="download-button">Go Back</button></Link>
+      <Link to="/main"><button className="download-button font-poppins">Go Back</button></Link>
     </div>
   )
 }
