@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding: 50px;
-
+  
   }
   
   h1 {
@@ -23,4 +23,37 @@
     margin-bottom: 20px;
     line-height: 1.5;
   }
+
+.Features{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  border: 3px solid rgb(200, 162, 162);
+  border-radius: 10px;
+  padding:10px ;
+  }
+  h1 {
+    font-size: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 10;
+  }
+  
+  .List {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .List:hover{
+    cursor:default;
+    box-shadow: 0 2px 4px rgba(54, 162, 204, 0.2);
+  }  
+  
   

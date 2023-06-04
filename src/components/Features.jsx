@@ -13,11 +13,11 @@ const features = [
 
 function Features() {
   return (
-    <div className="HomePage text-white">
-      <h1 className='text-[30px] semi-bold poppins '>Features of our Patient Record Software:</h1>
+    <div className="Features text-white">
+      <h1 className='text-[30px] semi-bold poppins'>Features of our Patient Record Software:</h1>
       <ul>
         {features.map((feature) => (
-          <li className='font-poppins'>{feature}</li>
+          <li className='List font-poppins'>{feature}</li>
         ))}
       </ul>
     </div>

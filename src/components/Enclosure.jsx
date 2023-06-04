@@ -3,7 +3,9 @@ import FileList from './FileList';
 import axios from "axios";
 import './Styling/main.css'
 import { Link } from 'react-router-dom';
-
+import {storage} from '../firebase'
+import {ref, uploadBytes} from 'firebase/storage'
+import {v4} from 'uuid'
 
 function Enclosure() {
   const [files, setFiles] = useState([]);
@@ -47,6 +49,16 @@ function Enclosure() {
 
   };
 
+  const uploadData = ()=>{
+    if(files==null) return;
+    const fileref = ref(storage,`files/${files.name + v4()}`)
+    uploadBytes(fileref, files)
+    .then(()=>{
+      alert("Successfully uploaded!")    
+    })
+
+
+  }
   return (
     <div>
       <h1 class='title'>Staging Area</h1>
@@ -57,8 +69,8 @@ function Enclosure() {
           <label for="file">Choose a file</label>
           <button class="button" onClick={() => handleDeleteFile(0)}>Delete</button>
           <label htmlFor="update-file">
-            <input type="file" id="update-file" onChange={(event) => handleUpdateFile(0, event)} style={{ display: 'none' }} />
-            <button class="button">Update</button>
+            <input type="file" id="update-file" onChange={(event) => setFiles(event.target.files[0])} style={{ display: 'none' }} />
+            <button class="button" onClick={uploadData}>Update</button>
           </label>
         </div>
         <Link to="/List"><button class="button-1" onClick={() => renderdatabase}>Open Reports</button></Link>
