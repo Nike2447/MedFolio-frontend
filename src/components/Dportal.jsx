@@ -51,7 +51,7 @@ const Dportal = ({history}) => {
 
   const renderform = (
     <form onSubmit={handleSubmit} className='h-[400px]'>
-      <div className="title text-white font-poppins font-bold ">Sign In</div>
+      <div className="title text-white font-poppins font-bold cursor-[default]">Sign In</div>
         <div className='input-container'>
           <label className='text-white font-poppins text-[20px]'>Doctor ID</label>
           <input  

@@ -56,8 +56,6 @@ function Enclosure() {
     .then(()=>{
       alert("Successfully uploaded!")    
     })
-
-
   }
   return (
     <div>
@@ -70,7 +68,7 @@ function Enclosure() {
           <button class="button" onClick={() => handleDeleteFile(0)}>Delete</button>
           <label htmlFor="update-file">
             <input type="file" id="update-file" onChange={(event) => setFiles(event.target.files[0])} style={{ display: 'none' }} />
-            <button class="button" onClick={uploadData}>Update</button>
+            <button className="button" onClick={uploadData}>Update</button>
           </label>
         </div>
         <Link to="/List"><button class="button-1" onClick={() => renderdatabase}>Open Reports</button></Link>
